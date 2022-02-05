@@ -1,0 +1,3 @@
+[submodule "deepml_ma"]
+	path = deepml_ma
+	url = https://github.com/bashkanov/deepml_ma.git
