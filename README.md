@@ -8,15 +8,10 @@ The backbone model is a 3D classification model, Resnet10, an extension of 3D cl
 
 ### ArcFace Loss 
 <p align="center">
-<figure>
-	<img src="fig/ArcFace.png" width="500" height="150">
-	<figcaption> 
-	[Image Source](https://github.com/deepinsight/insightface/tree/master/recognition)
-	</figcaption>
-</figure>
+<img src="fig/ArcFace.png" width="500" height="150">
 </p> 
 
-Adapted margin-based softmax loss can be found in `metric_loss.py`.
+Adapted margin-based softmax loss can be found in `metric_loss.py`. Illustration of the implementation of ArcFace loss is as depcited above ([Image Source](https://github.com/deepinsight/insightface/tree/master/recognition).
 
 ### Late Fusion
 <p align="center">
@@ -65,6 +60,16 @@ a dropout layer before connecting to output layer.
 | ArcFace  | 0.65 (0.02)  | 0.64 (0.02) | 0.51 (0.03) |
 
 ### Content Based Image Retrieval (CBIR)
+Content-based Image Retrieval (CBIR) attempts to utilise image as a query to retrieve
+images from the image database in replacement of keywords for more efficient retrieval
+process. In this work, we first map volumetric images to
+low dimensional embedding space, where the similarity scores between each query
+embedding and retrieval embedding are computed. The nearest neighbour of the
+query embedding are ranked according to the similarity scores in descending order.
+While it is not trivial to visualise volumetric data and its retrieved images, the mid
+slice of every patients’ MRI images are chosen to be displayed for CBIR task with the
+assumption that the mid image slice contains the most significant image description
+for a patient’s prostate. 
 
 <p align="center">
 <img src="fig/SingleArcHead_CBIR.png" width="500" height="500">
