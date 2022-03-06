@@ -8,7 +8,7 @@ The backbone model is a 3D classification model, Resnet10, an extension of 3D cl
 
 ### ArcFace Loss 
 <p align="center">
-<img src="fig/ArcFace.png" width="600" height="250">
+<img src="fig/ArcFace.png" width="600" height="200">
 </p> 
 
 Adapted margin-based softmax loss can be found in `metric_loss.py`. Illustration of the implementation of ArcFace loss is as depcited above ([Image Source](https://github.com/deepinsight/insightface/tree/master/recognition)).
