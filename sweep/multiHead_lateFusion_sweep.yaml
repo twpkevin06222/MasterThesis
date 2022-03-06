@@ -1,0 +1,67 @@
+program: DML_multiHead_lateFusion.py
+name: multiHead_lateFusion_sweep
+entity: tripletmaster
+project: multiHead_lateFusion
+method: grid
+metric:
+  name: Val_total_loss
+  goal: minimize
+parameters:
+  csv:
+    value: '/csv/multihead_ds_dwi1500_npy.csv'
+  gpu_id:
+    value: 0
+  val_fold:
+    values: [0,1,2,3]
+  n_class:
+    value: 2
+  batch_size:
+    value: 24
+  epochs:
+    value: 101
+  learning_rate:
+    value: 1e-4
+  optimizer:
+    value: tf.keras.optimizers.Adam
+  lr_state:
+    value: 'constant' # 'scheduler' or 'constant'
+  backbone_model:
+    value: 'resnet10ah'
+  init_filters:
+    value: 64
+  weights_decay:
+    value: 0
+  min_max_norm:
+    value: True
+  depth:
+    value: 24
+  patch_size:
+    value: (144, 144, depth)
+  aug_prob:
+    value: 0.5
+  dropout:
+    value: 0.5
+  emb_dim:
+    value: 128
+  val_batch_size:
+    value: 24
+  label_smoothing:
+    value: 0.0
+  margin:
+    value: 0.1
+  logits_scale:
+    value: "[2.5, 2.5, 2.5, 2.5, 2.5, 2.5]"
+  n_channel:
+    value: 3
+  k:
+    value: 1
+  R:
+    value: 10
+  gamma:
+    value: 2.0
+  head:
+    values: ['arc', 'dense']
+  include_emb:
+    value: False
+  loss_aggregration:
+    value: "mean" # "sum" or "mean"

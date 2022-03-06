@@ -1,0 +1,63 @@
+program: inference_singleHead.py
+name: inference_singleHead_sweep
+entity: tripletmaster
+project: inference_singleHead
+method: grid
+metric:
+  name: Val_total_loss
+  goal: minimize
+parameters:
+  csv:
+    value: '/csv/multihead_ds_dwi1500_npy.csv'
+  gpu_id:
+    value: 0
+  val_fold:
+    values: [0,1,2,3]
+  n_class:
+    value: 2
+  batch_size:
+    value: 24
+  epochs:
+    value: 1
+  learning_rate:
+    value: 1e-4
+  optimizer:
+    value: tf.keras.optimizers.Adam
+  lr_state:
+    value: 'constant' # 'scheduler' or 'constant'
+  backbone_model:
+    value: 'resnet10ah'
+  init_filters:
+    value: 64
+  weights_decay:
+    value: 0
+  min_max_norm:
+    value: True
+  depth:
+    value: 24
+  patch_size:
+    value: (144, 144, depth)
+  aug_prob:
+    value: 0.5
+  dropout:
+    value: 0.5
+  emb_dim:
+    value: 128
+  val_batch_size:
+    value: 24
+  margin:
+    value: 0.2
+  logits_scale:
+    value: 5.0
+  n_channel:
+    value: 3
+  k:
+    value: 1
+  R:
+    value: 10
+  gamma:
+    value: 2.0
+  head:
+    values: ['arc', 'dense']
+  include_emb:
+    value: False
