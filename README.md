@@ -9,4 +9,7 @@ The backbone model is a 3D classification model, Resnet10, an extension of 3D cl
 ### ArcFace Loss 
 Adapted margin-based softmax loss can be found in `metric_loss.py`.
 
-### Late Fusion 
+### Late Fusion
+<p align="center">
+<img src="fig/LateFushion.png" width="600" height="500">
+</p> 
