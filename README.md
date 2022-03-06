@@ -27,7 +27,7 @@ Three prostate MRI image sequences (T2, DWI, ADC) are provided in the data set.
 While it is common practice to liaise the image sequences as channel input for richer
 data features, however, it is not possible for all three image sequences to have the
 same alignment due to constraints. We hypothesise that each image sequence would
-contribute to di↵erent representations in the embedding space, by opting to feed
+contribute to different representations in the embedding space, by opting to feed
 the network on each image sequence respectively. The embedding output of three
 image sequences is concatenated forming an ensemble embedding that would enrich
 the embedding space. This form a late fusion where the concatenated embedding is
@@ -47,8 +47,26 @@ a dropout layer before connecting to output layer.
 |:--:|:--:|
 |![](fig/SingleDenseHead_AUC.png)|![](fig/SingleArcHead_AUC.png)|
 
+|       | AUC    |Accuracy| Precision| Recall | F1|
+| :-----------: | :----------: | :-----------: | :-----------: |:-----------: | :-----------: |
+| Baseline  | 0.77 (0.01)  | 0.71 (0.02) | 0.72 (0.02) | 0.71 (0.02) | 0.70 (0.03)|
+| ArcFace  | 0.79 (0.01)  | 0.73 (0.01) | 0.73 (0.02) | 0.73 (0.01) | 0.72 (0.01)|
+
+
 
 ### Retrieval Task 
 |Baseline|ArcFace|
 |:--:|:--:|
 |![](fig/SingleDenseHead_tsne.png)|![](fig/SingleArcHead_tsne.png)|
+
+|       | R@1    | R@10_Precision| MAP@10| 
+| :-----------: | :----------: | :-----------: | :-----------: |
+| Baseline  | 0.57 (0.02)  | 0.58 (0.02) | 0.43 (0.02) |
+| ArcFace  | 0.65 (0.02)  | 0.64 (0.02) | 0.51 (0.03) |
+
+### Content Based Image Retrieval (CBIR)
+
+<p align="center">
+<img src="fig/SingleArcHead_CBIR.png" width="500" height="500">
+</p> 
+
