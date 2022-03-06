@@ -11,5 +11,5 @@ Adapted margin-based softmax loss can be found in `metric_loss.py`.
 
 ### Late Fusion
 <p align="center">
-<img src="fig/LateFushion.png" width="300" height="300">
+<img src="fig/LateFushion.png" width="400" height="300">
 </p> 
