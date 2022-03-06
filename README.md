@@ -39,6 +39,16 @@ a dropout layer before connecting to output layer.
 * The source code for models training can be found in the folder `/train`
 * Inferencing of the models can be found in the folder `/inference` 
 * The configurations for training and inferencing with cross validation in `.yaml` are listed in `/sweep`
+* Download dependencies `$ pip install --r requirements.txt`
 
-## Requirement
-`$ pip install --r requirements.txt`
+## Results 
+### Classification Task 
+|Baseline|ArcFace|
+|:--:|:--:|
+|![](fig/SingleDenseHead_AUC.png)|![](fig/SingleArcHead_AUC.png)|
+
+
+### Retrieval Task 
+|Baseline|ArcFace|
+|:--:|:--:|
+|![](fig/SingleDenseHead_tsne.png)|![](fig/SingleArcHead_tsne.png)|
