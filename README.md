@@ -15,7 +15,7 @@ Adapted margin-based softmax loss can be found in `metric_loss.py`. Illustration
 
 ### Late Fusion
 <p align="center">
-<img src="fig/LateFusion.png" width="400" height="300">
+<img src="fig/LateFusion.jpg" width="400" height="300">
 </p> 
 
 Three prostate MRI image sequences (T2, DWI, ADC) are provided in the data set.
