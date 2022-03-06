@@ -10,7 +10,9 @@ The backbone model is a 3D classification model, Resnet10, an extension of 3D cl
 <p align="center">
 <figure>
 	<img src="fig/ArcFace.png" width="500" height="150">
-	<figcaption> [Image Source](https://github.com/deepinsight/insightface/tree/master/recognition)
+	<figcaption> 
+	[Image Source](https://github.com/deepinsight/insightface/tree/master/recognition)
+	</figcaption>
 </figure>
 </p> 
 
