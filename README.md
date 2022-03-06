@@ -4,4 +4,9 @@ Implementation of master thesis entitled "Classification of Clinically Significa
 ## Experiment Setup 
 
 ### Backbone Model
-The backbone model is a 3D classification model, Resnet10, an extension of 3D classification model zoo from [ZFTurbo](https://github.com/ZFTurbo/classification_models_3D). Or simply `pip install classification-models-3D` 
+The backbone model is a 3D classification model, Resnet10, an extension of 3D classification model zoo from [ZFTurbo](https://github.com/ZFTurbo/classification_models_3D). Or simply `pip install classification-models-3D`. 
+
+### ArcFace Loss 
+Adapted margin-based softmax loss can be found in `metric_loss.py`.
+
+### Late Fusion 
