@@ -81,6 +81,7 @@ for a patient’s prostate.
 </p> 
 
 ## Individual Contributions
+
 <p align="justify">
 Presents work that implements margin-based softmax loss on 3D medical imaging for classification and retrieval task. The work hypothesised that through the use
 cases of deep metric learning, specifically margin-based softmax loss, the model is able
@@ -96,7 +97,9 @@ the extension of margin-based softmax loss on the context of visual similarity i
 multiparametric MRI, such that the method could gain insights related to the distance metric as a
 measurement of patient pairs represented by learned features. The whole experiment design, experiment set up and report writing are done by Wai Po Kevin Teng.  
 </p>
+
 ## Challenges Faces
+
 <p align="justify">
 - Prior to margin-based softmax loss approach, we attempted contrastive approach (triplet loss), where it suffers from the dilemma of sampling strategy for triplets mining where the model ended up with class collapse phenomenon, i.e. the model is only capable of predicting single class label.
 - Hyperparmeter tuning for margin and logits scale of ArcFace loss is not trivial. Too large
@@ -108,7 +111,9 @@ not sufficient enough for good model generalisation. Deeper model does not fit w
 in this data set where overfitting is more apparent.  
 - Data set is noisy and lead to slow convergence of model performance. 
 </p>
+
 ## What Would They Do Differently if Restarting the Project Now
+
 <p align="justify">
 - In order to address the problem of noisy data set, an enhanced
 variations of state-of-the-art ArcFace loss could be implemented as future work to
