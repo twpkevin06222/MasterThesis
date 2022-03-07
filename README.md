@@ -83,7 +83,7 @@ dissimilarity for inter-class samples in prostate disease classification among p
 Patient similarity classification is able to draw a discriminate decision boundary for
 the detection of clinically significant prostate cancer. In turn, this discovery would
 act as a critical clinical decision support for biopsies and prevent over-diagnosis. In
-addition to prostate cancer classification, the sub-optimal task of this thesis is to
+addition to prostate cancer classification, the sub-optimal task of this work is to
 exploit the capability of CBIR on volumetric medical images with margin-based
 softmax loss. Through the implementation of CBIR, the work aims to investigate
 the extension of margin-based softmax loss on the context of visual similarity in
