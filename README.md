@@ -46,12 +46,10 @@ a dropout layer before connecting to output layer.
 |:--:|:--:|
 |![](fig/SingleDenseHead_AUC.png)|![](fig/SingleArcHead_AUC.png)|
 
-<p align="justify">
 |       | AUC    |Accuracy| Precision| Recall | F1|
 | :-----------: | :----------: | :-----------: | :-----------: |:-----------: | :-----------: |
 | Baseline  | 0.77 (0.01)  | 0.71 (0.02) | 0.72 (0.02) | 0.71 (0.02) | 0.70 (0.03)|
 | ArcFace  | 0.79 (0.01)  | 0.73 (0.01) | 0.73 (0.02) | 0.73 (0.01) | 0.72 (0.01)|
-</p>
 
 
 ### Retrieval Task 
@@ -59,12 +57,11 @@ a dropout layer before connecting to output layer.
 |:--:|:--:|
 |![](fig/SingleDenseHead_tsne.png)|![](fig/SingleArcHead_tsne.png)|
 
-<p align="justify">
 |       | R@1    | R@10_Precision| MAP@10| 
 | :-----------: | :----------: | :-----------: | :-----------: |
 | Baseline  | 0.57 (0.02)  | 0.58 (0.02) | 0.43 (0.02) |
 | ArcFace  | 0.65 (0.02)  | 0.64 (0.02) | 0.51 (0.03) |
-</p>
+
 ### Content Based Image Retrieval (CBIR)
 <p align="justify">
 Content-based Image Retrieval (CBIR) attempts to utilise image as a query to retrieve
