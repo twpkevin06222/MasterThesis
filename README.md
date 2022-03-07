@@ -75,3 +75,39 @@ for a patient’s prostate.
 <img src="fig/SingleArcHead_CBIR.png" width="500" height="500">
 </p> 
 
+## Individual Contributions
+Presents work that implements margin-based softmax loss on 3D medical imaging for classification and retrieval task. The work hypothesised that through the use
+cases of deep metric learning, specifically margin-based softmax loss, the model is able
+to learn an embedding distance by enforcing similarity for intra-class samples and
+dissimilarity for inter-class samples in prostate disease classification among patients.
+Patient similarity classification is able to draw a discriminate decision boundary for
+the detection of clinically significant prostate cancer. In turn, this discovery would
+act as a critical clinical decision support for biopsies and prevent over-diagnosis. In
+addition to prostate cancer classification, the sub-optimal task of this thesis is to
+exploit the capability of CBIR on volumetric medical images with margin-based
+softmax loss. Through the implementation of CBIR, the work aims to investigate
+the extension of margin-based softmax loss on the context of visual similarity in
+multiparametric MRI, such that the method could gain insights related to the distance metric as a
+measurement of patient pairs represented by learned features. The whole experiment design, experiment set up and report writing are done by Wai Po Kevin Teng.  
+
+## Challenges Faces
+- Prior to margin-based softmax loss approach, we attempted contrastive approach (triplet loss), where it suffers from the dilemma of sampling strategy for triplets mining where the model ended up with class collapse phenomenon, i.e. the model is only capable of predicting single class label.
+- Hyperparmeter tuning for margin and logits scale of ArcFace loss is not trivial. Too large
+of a logits scale value would result easier mis-classification despite having higher
+confidence score for class probability. Higher margin would over-penalise the objective
+function preventing the model from learning useful features.
+- Dealing with private data set in this work, the number of data set is
+not sufficient enough for good model generalisation. Deeper model does not fit well
+in this data set where overfitting is more apparent.  
+- Data set is noisy and lead to slow convergence of model performance. 
+
+## What Would They Do Differently if Restarting the Project Now
+- In order to address the problem of noisy data set, an enhanced
+variations of state-of-the-art ArcFace loss could be implemented as future work to
+improve the results of the work approach. The authors of ArcFace loss, [Deng et al. [2020]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123560715.pdf) proposed sub-center ArcFace, such that training sample needs to be close to one of the K sub-centers for each class
+instead of a class center. This approach promotes label noise robustness and leverage
+the need for training samples to revolve around only one center.
+- Generating new data is expensive. In order to tackle the lack of data set, [Ko and Gu [2020]](https://arxiv.org/abs/2003.02546) proposed
+an augmentation method, called "embedding expansion" such that multiple synthetic
+feature points from the same class is generated. Embedding expansion is achieved by taking the linear interpolation between two feature points in the embedding space. 
+
