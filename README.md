@@ -20,6 +20,7 @@ Adapted margin-based softmax loss can be found in `metric_loss.py`. Illustration
 <img src="fig/LateFusion.jpg" width="400" height="300">
 </p> 
 
+<p align="justify">
 Three prostate MRI image sequences (T2, DWI, ADC) are provided in the data set.
 While it is common practice to liaise the image sequences as channel input for richer
 data features, however, it is not possible for all three image sequences to have the
@@ -30,7 +31,7 @@ image sequences is concatenated forming an ensemble embedding that would enrich
 the embedding space. This form a late fusion where the concatenated embedding is
 connected to a fully connected network with a dimension size of 128 associating with
 a dropout layer before connecting to output layer.
-
+</p>
 ## Repo Structure
 * Data granularity of the data set can be found in the folder `/eda`
 * The source code for models training can be found in the folder `/train`
@@ -62,6 +63,7 @@ a dropout layer before connecting to output layer.
 | ArcFace  | 0.65 (0.02)  | 0.64 (0.02) | 0.51 (0.03) |
 
 ### Content Based Image Retrieval (CBIR)
+<p align="justify">
 Content-based Image Retrieval (CBIR) attempts to utilise image as a query to retrieve
 images from the image database in replacement of keywords for more efficient retrieval
 process. In this work, we first map volumetric images to
@@ -72,12 +74,14 @@ While it is not trivial to visualise volumetric data and its retrieved images, t
 slice of every patients’ MRI images are chosen to be displayed for CBIR task with the
 assumption that the mid image slice contains the most significant image description
 for a patient’s prostate. 
+</p>
 
 <p align="center">
 <img src="fig/SingleArcHead_CBIR.png" width="500" height="500">
 </p> 
 
 ## Individual Contributions
+<p align="justify">
 Presents work that implements margin-based softmax loss on 3D medical imaging for classification and retrieval task. The work hypothesised that through the use
 cases of deep metric learning, specifically margin-based softmax loss, the model is able
 to learn an embedding distance by enforcing similarity for intra-class samples and
@@ -91,8 +95,9 @@ softmax loss. Through the implementation of CBIR, the work aims to investigate
 the extension of margin-based softmax loss on the context of visual similarity in
 multiparametric MRI, such that the method could gain insights related to the distance metric as a
 measurement of patient pairs represented by learned features. The whole experiment design, experiment set up and report writing are done by Wai Po Kevin Teng.  
-
+</p>
 ## Challenges Faces
+<p align="justify">
 - Prior to margin-based softmax loss approach, we attempted contrastive approach (triplet loss), where it suffers from the dilemma of sampling strategy for triplets mining where the model ended up with class collapse phenomenon, i.e. the model is only capable of predicting single class label.
 - Hyperparmeter tuning for margin and logits scale of ArcFace loss is not trivial. Too large
 of a logits scale value would result easier mis-classification despite having higher
@@ -102,8 +107,9 @@ function preventing the model from learning useful features.
 not sufficient enough for good model generalisation. Deeper model does not fit well
 in this data set where overfitting is more apparent.  
 - Data set is noisy and lead to slow convergence of model performance. 
-
+</p>
 ## What Would They Do Differently if Restarting the Project Now
+<p align="justify">
 - In order to address the problem of noisy data set, an enhanced
 variations of state-of-the-art ArcFace loss could be implemented as future work to
 improve the results of the work approach. The authors of ArcFace loss, [Deng et al. [2020]](https://www.ecva.net/papers/eccv_2020/papers_ECCV/papers/123560715.pdf) proposed sub-center ArcFace, such that training sample needs to be close to one of the K sub-centers for each class
@@ -112,4 +118,5 @@ the need for training samples to revolve around only one center.
 - Generating new data is expensive. In order to tackle the lack of data set, [Ko and Gu [2020]](https://arxiv.org/abs/2003.02546) proposed
 an augmentation method, called "embedding expansion" such that multiple synthetic
 feature points from the same class is generated. Embedding expansion is achieved by taking the linear interpolation between two feature points in the embedding space. 
+</p>
 
